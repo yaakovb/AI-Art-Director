@@ -38,3 +38,9 @@ test("every rubric placeholder is named in the skill", () => {
   assert.deepEqual([...placeholders].sort(), ["ASPECT_RATIO", "DESCRIPTION", "MUST_AVOID", "MUST_INCLUDE"]);
   for (const p of placeholders) assert.ok(skill.includes(`{{${p}}}`), `skill does not mention {{${p}}}`);
 });
+
+test("rubric treats uneven margins as minor polish, not major", () => {
+  assert.match(rubric, /Do not[\s\S]*uneven margins[\s\S]*major/i);
+  assert.match(rubric, /uneven margins as \*\*minor\*\*/i);
+  assert.match(skill, /uneven margins as minor polish only/i);
+});

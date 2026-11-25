@@ -59,7 +59,7 @@ Write `<runDir>/next.instructions.json`:
 }
 ```
 
-- `prompt` must stand alone: subject, pose, style (outline weight, shading, proportions), palette, framing ("centered, full body, padding on all sides"), background ("plain solid light-gray background"), and "no text".
+- `prompt` must stand alone: subject, pose, style (outline weight, shading, proportions), palette, framing ("full body, nothing cropped, some padding from the edges"), background ("plain solid light-gray background"), and "no text". Do not put perfect centering or equal margins in `mustInclude`; the native generator often ignores exact margin requests, and the critic treats uneven margins as minor polish only.
 - Say what to keep from the reference ("the same character from the reference image, identical style and colors") and what changes.
 - `mustInclude` and `mustAvoid` come only from `DESC` and the reference, and stay the same for the whole run. The critic grades against them, so adding constraints during revisions moves the target and lowers scores.
 - On revisions, first run `npm run -s art -- status --run <runDir>`. Rebuild the prompt from the original brief plus the `suggestedCorrections` from previous attempts; corrections change the `prompt`, not the lists. Start from the best-scoring attempt's prompt, not necessarily the last one. Do not reintroduce issues that were already fixed. List what changed in `changesFromPrevious`.
@@ -112,7 +112,9 @@ Read the `NEXT:` line:
 npm run -s art -- finalize --run <runDir>
 ```
 
-Report to the user:
-- The outcome (approved on attempt N, or the best of 5 if none was approved), with the best image embedded as `![best](<absolute path>)`.
+Report to the user in the chat (always show the image; do not only write a path):
+- What you ran: REF, DESC, ASPECT, review mode.
+- The outcome (approved on attempt N, or the best of 5 if none was approved).
+- Embed the best image with markdown: `![best](<absolute path to the best attempt file in the run folder>)`.
 - A short table: attempt, score, decision, main issue.
-- The run folder path and the review mode used.
+- The run folder path.
