@@ -115,6 +115,6 @@ npm run -s art -- finalize --run <runDir>
 Report to the user in the chat (always show the image; do not only write a path):
 - What you ran: REF, DESC, ASPECT, review mode.
 - The outcome (approved on attempt N, or the best of 5 if none was approved).
-- Embed the best image with markdown: `![best](<absolute path to the best attempt file in the run folder>)`.
+- Show the best image by calling the **Read** tool on the absolute path of the best attempt file in the run folder (for example `.../attempt-5.jpg`). Do **not** use markdown `![...](...)` links; they often render as a broken image in chat.
 - A short table: attempt, score, decision, main issue.
 - The run folder path.
