@@ -8,6 +8,7 @@
     "node": ">=20"
   },
   "scripts": {
+    "art": "tsx src/cli.ts",
     "typecheck": "tsc --noEmit",
     "test": "node --import tsx --test \"test/**/*.test.ts\"",
     "check": "npm run typecheck && npm test"
