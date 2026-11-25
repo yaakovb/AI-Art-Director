@@ -115,6 +115,9 @@ npm run -s art -- finalize --run <runDir>
 Report to the user in the chat (always show the image; do not only write a path):
 - What you ran: REF, DESC, ASPECT, review mode.
 - The outcome (approved on attempt N, or the best of 5 if none was approved).
-- Show the best image by calling the **Read** tool on the absolute path of the best attempt file in the run folder (for example `.../attempt-5.jpg`). Do **not** use markdown `![...](...)` links; they often render as a broken image in chat.
+- Show the best image this way (Cloud Agent chat needs the artifacts HTML path; Read alone and markdown links often do not display):
+  1. Copy the best attempt file from the run folder to `/opt/cursor/artifacts/` with a short descriptive name (for example `cp <runDir>/attempt-1.jpg /opt/cursor/artifacts/brother-sword-tile.jpg`).
+  2. In your chat reply, embed it with an HTML img tag pointing at that artifacts path, for example: `<img src="/opt/cursor/artifacts/brother-sword-tile.jpg" alt="approved tile" />`
+  3. Do **not** rely on the **Read** tool alone to display the image, and do **not** use markdown `![...](...)` links.
 - A short table: attempt, score, decision, main issue.
 - The run folder path.

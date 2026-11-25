@@ -44,3 +44,10 @@ test("rubric treats uneven margins as minor polish, not major", () => {
   assert.match(rubric, /uneven margins as \*\*minor\*\*/i);
   assert.match(skill, /uneven margins as minor polish only/i);
 });
+
+test("skill shows final images via /opt/cursor/artifacts HTML img, not Read or markdown", () => {
+  assert.match(skill, /\/opt\/cursor\/artifacts\//);
+  assert.match(skill, /<img src="\/opt\/cursor\/artifacts\//);
+  assert.match(skill, /Do \*\*not\*\* rely on the \*\*Read\*\* tool alone/i);
+  assert.match(skill, /do \*\*not\*\* use markdown/i);
+});
