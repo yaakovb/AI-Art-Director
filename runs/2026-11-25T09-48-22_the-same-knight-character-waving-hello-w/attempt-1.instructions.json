@@ -1,0 +1,24 @@
+{
+  "prompt": "Game character portrait of the same knight character from the reference image, identical style and colors. He is shown from the knees up in a front three-quarter view, body turned slightly to his left and face toward the viewer. He waves hello with his raised right hand: an open blue-gloved palm at head height with five clearly separated fingers, empty, nothing in that hand. His left arm holds the round red shield with the gold rim, gold rivets and gold fleur-de-lis emblem in front of his left side. Friendly, warm smile showing teeth, big brown eyes, thick dark eyebrows. Keep every costume detail: blue helmet with gold trim, gold crest and red plume, blue plate armor with gold edges, gold cross on the chest, grey chainmail at the elbows, brown leather belt with gold buckle and pouch, sword sheathed or absent. Cartoon chibi proportions (large head, compact body), bold clean black outlines of even weight, flat cel shading with one soft highlight tone, saturated royal blue, gold-yellow and red palette. Centered, with padding on all sides, nothing cropped. Plain solid light-gray background. No text, no watermark.",
+  "styleNotes": "Chibi cartoon game-asset style from the reference: bold uniform black outlines, flat cel shading with simple highlights, royal blue armor with gold trim, red plume, red-and-gold fleur-de-lis shield, plain light-gray background.",
+  "mustInclude": [
+    "Same knight identity as the reference: blue helmet with gold trim and red plume, blue armor with gold edges, gold cross on chest, brown belt",
+    "Free hand raised in a clear waving-hello gesture with an open, empty hand",
+    "Holding the round red shield with gold rim and gold fleur-de-lis on the other arm",
+    "Friendly smile",
+    "Front three-quarter view",
+    "Framed as a game character portrait, centered with padding, nothing cropped",
+    "Same cartoon style, outline weight and palette as the reference",
+    "Plain solid light background"
+  ],
+  "mustAvoid": [
+    "Sword or any object in the waving hand",
+    "Changed armor colors or emblems",
+    "Extra or malformed fingers, hands or limbs",
+    "Cropping of the head, waving hand or shield",
+    "Text, watermark, logos or busy background",
+    "Realistic or painterly rendering that departs from the reference style"
+  ],
+  "aspectRatio": "1:1",
+  "changesFromPrevious": []
+}

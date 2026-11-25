@@ -1,0 +1,40 @@
+{
+  "approved": true,
+  "qualityScore": 85,
+  "strengths": [
+    "Character identity is preserved exactly: blue helmet with gold crest and red plume, blue plate armor with gold edges, gold chest cross, chainmail at elbows, brown belt with gold buckle and pouch",
+    "Clear, readable waving-hello gesture with an open, empty gloved hand at head height; five fingers, no extra digits",
+    "Round red shield with gold rim, rivets and fleur-de-lis is held on the other arm and matches the reference",
+    "Friendly open smile with the same face design as the reference",
+    "Outline weight, cel shading, chibi proportions and palette match the reference; plain light-gray background, no text or artifacts",
+    "Centered with padding on all sides; silhouette reads well at small size"
+  ],
+  "issues": [
+    {
+      "category": "composition",
+      "description": "Framed as a full-body figure rather than a tighter character-portrait crop; the face and waving hand occupy a relatively small part of the frame for a portrait",
+      "severity": "minor"
+    },
+    {
+      "category": "requirement",
+      "description": "The three-quarter turn is subtle; torso and feet are close to frontal, almost identical to the reference stance",
+      "severity": "minor"
+    },
+    {
+      "category": "anatomy",
+      "description": "No hand or grip is visible behind the shield, so the shield looks pinned to the forearm rather than actively held",
+      "severity": "minor"
+    },
+    {
+      "category": "style",
+      "description": "Lower body and leg pose are copied almost verbatim from the reference, making the new pose feel less natural and less dynamic",
+      "severity": "minor"
+    }
+  ],
+  "suggestedCorrections": [
+    "Crop to a knees-up or waist-up portrait so the smiling face and waving hand fill more of the frame, keeping padding around the plume, hand and shield",
+    "Rotate the torso and hips more clearly toward the viewer's right so the far shoulder is partly hidden, giving an unmistakable front three-quarter view",
+    "Show the gloved fingers of the shield hand gripping the shield's edge or strap",
+    "Give the legs a relaxed new stance with weight on one leg instead of repeating the reference stance"
+  ]
+}
