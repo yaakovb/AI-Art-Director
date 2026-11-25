@@ -61,7 +61,8 @@ Write `<runDir>/next.instructions.json`:
 
 - `prompt` must stand alone: subject, pose, style (outline weight, shading, proportions), palette, framing ("centered, full body, padding on all sides"), background ("plain solid light-gray background"), and "no text".
 - Say what to keep from the reference ("the same character from the reference image, identical style and colors") and what changes.
-- On revisions, first run `npm run -s art -- status --run <runDir>`. Rebuild the prompt from the original brief plus all `suggestedCorrections` from previous attempts. Do not just append to the last prompt. Do not reintroduce issues that were already fixed. List what changed in `changesFromPrevious`.
+- `mustInclude` and `mustAvoid` come only from `DESC` and the reference, and stay the same for the whole run. The critic grades against them, so adding constraints during revisions moves the target and lowers scores.
+- On revisions, first run `npm run -s art -- status --run <runDir>`. Rebuild the prompt from the original brief plus the `suggestedCorrections` from previous attempts; corrections change the `prompt`, not the lists. Start from the best-scoring attempt's prompt, not necessarily the last one. Do not reintroduce issues that were already fixed. List what changed in `changesFromPrevious`.
 
 Validate:
 
